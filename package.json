@@ -1,0 +1,32 @@
+{
+  "name": "mnlib_utils",
+  "version": "0.0.1",
+  "description": "utility functions to be used across all my projects",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "publish:pkg": "npm run clean && npm run build && npm publish"
+  },
+  "keywords": [],
+  "author": "Aman Mavai",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3"
+  }
+}
